@@ -38,7 +38,7 @@
     });
 
     // GitHub APIで夜間輪番PDFリストを自動生成
-    const repo = 'mitaraiyouichi/sendaipha'; // あなたのリポジトリ名
+    const repo = 'm-youichi/sendaipha'; // 正しいリポジトリ名に修正
     const path = '夜間輪番';
     fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`)
       .then(res => res.json())
