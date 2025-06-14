@@ -43,14 +43,15 @@
     fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`)
       .then(res => res.json())
       .then(files => {
-        // PDFのみ、ファイル名で降順ソート
+        const baseUrl = 'https://m-youichi.github.io/sendaipha/夜間輪番/';
         const pdfs = files
-          .filter(f => f.name.endsWith('.pdf'))
+          .filter(f => f.name.toLowerCase().endsWith('.pdf'))
           .sort((a, b) => b.name.localeCompare(a.name, 'ja'));
         const ul = document.getElementById('night-pdf-list');
         pdfs.forEach(f => {
+          const url = baseUrl + encodeURIComponent(f.name);
           const li = document.createElement('li');
-          li.innerHTML = `<a href='${f.download_url}' target='_blank'>${f.name.replace('.pdf','')}</a>`;
+          li.innerHTML = `<a href='${url}' target='_blank'>${f.name.replace('.pdf','')}</a>`;
           ul.appendChild(li);
         });
       });
