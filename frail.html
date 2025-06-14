@@ -7,23 +7,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="header"></header>
+  <div id="header-include"></div>
+  <div class="container">
+    <div id="sidebar-include"></div>
+    <div class="main-content">
+      <section>
+        <h2>フレイル予防講座</h2>
+        <p>ただいま準備中</p>
+      </section>
+    </div>
+  </div>
+  <div id="footer-include"></div>
   <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
-  </script>
-  <main>
-    <section class="container">
-      <h2>フレイル予防講座</h2>
-      <p>ただいま準備中</p>
-    </section>
-  </main>
-  <footer id="footer"></footer>
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
+    fetch('header.html').then(res => res.text()).then(html => {
+      document.getElementById('header-include').innerHTML = html;
+    });
+    fetch('sidebar.html').then(res => res.text()).then(html => {
+      document.getElementById('sidebar-include').innerHTML = html;
+    });
+    fetch('footer.html').then(res => res.text()).then(html => {
+      document.getElementById('footer-include').innerHTML = html;
+    });
   </script>
 </body>
 </html> 
