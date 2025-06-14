@@ -1,7 +1,7 @@
 <div class="sidebar">
   <ul>
     <li><a href="holiday.html">休日当番</a></li>
-    <li><a href="night.html">夜間休日輪番</a></li>
+    <li><a href="night.html">夜間輪番</a></li>
     <li><a href="homecare.html">在宅可能薬局リスト</a></li>
     <li><a href="frail.html">フレイル予防講座</a></li>
     <li><a href="search.html">会員薬局検索</a></li>
@@ -12,4 +12,17 @@
     <li><a href="kagonet.html">カゴネット</a></li>
     <li><a href="koshiki.html">甑島医療調査</a></li>
   </ul>
-</div> 
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.sidebar a');
+  const path = location.pathname.split('/').pop().replace(/\?.*$/, ''); // クエリ除去
+  links.forEach(link => {
+    // .htmlの有無を無視して比較
+    if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
+      link.classList.add('active');
+    }
+  });
+});
+</script> 

@@ -41,7 +41,7 @@ header, .header-container {
 }
 
 .header-logo-large {
-  height: 160px;
+  height: 90px;
   margin-right: 1.5rem;
 }
 
@@ -476,6 +476,10 @@ footer {
 }
 .sidebar a:hover {
   background: #f0f8f5;
+}
+.sidebar a.active {
+  background: #eaf6fb;
+  color: #1b2c3a;
 }
 .main-content {
   flex: 1;
