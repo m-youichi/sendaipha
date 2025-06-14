@@ -13,7 +13,7 @@
     <div class="main-content">
       <section>
         <h2>夜間休日輪番</h2>
-        <p>ただいま準備中</p>
+        <ul id="night-pdf-list" class="pdf-list"></ul>
       </section>
     </div>
   </div>
@@ -28,6 +28,24 @@
     fetch('footer.html').then(res => res.text()).then(html => {
       document.getElementById('footer-include').innerHTML = html;
     });
+
+    // GitHub APIで夜間輪番PDFリストを自動生成
+    const repo = 'mitaraiyouichi/sendaipha'; // あなたのリポジトリ名
+    const path = '夜間輪番';
+    fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`)
+      .then(res => res.json())
+      .then(files => {
+        // PDFのみ、ファイル名で降順ソート
+        const pdfs = files
+          .filter(f => f.name.endsWith('.pdf'))
+          .sort((a, b) => b.name.localeCompare(a.name, 'ja'));
+        const ul = document.getElementById('night-pdf-list');
+        pdfs.forEach(f => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href='${f.path}' target='_blank'>${f.name.replace('.pdf','')}</a>`;
+          ul.appendChild(li);
+        });
+      });
   </script>
 </body>
 </html> 

@@ -7,50 +7,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="img/logo.png" alt="一般社団法人川内薬剤師会ロゴ" style="height:60px;margin-right:1rem;">
-      <h1><a href="index.html" style="color:inherit;text-decoration:none;">一般社団法人川内薬剤師会</a></h1>
-      <img src="img/farumin_sakurajima.png" alt="ふぁるみん 鹿児島県 桜島" class="header-photo">
+  <div id="header-include"></div>
+  <div class="container">
+    <div id="sidebar-include"></div>
+    <div class="main-content">
+      <section>
+        <h2>薬薬連携</h2>
+        <p>ただいま準備中</p>
+      </section>
     </div>
-    <div class="header-message">地域の皆様の健康を守るために、日々活動しています。</div>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li class="has-submenu"><a href="about.html">当会について</a></li>
-        <li><a href="office.html">事務局</a></li>
-        <li><a href="fax.html">FAXコーナー</a></li>
-        <li><a href="contact.html">お問い合せ</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="container">
-      <h2>薬薬連携</h2>
-      <p>ただいま準備中</p>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <ul>
-          <li><a href="https://kayaku.jp/" target="_blank">鹿児島県薬剤師会</a></li>
-          <li><a href="https://kago-net.jp/" target="_blank">カゴネット</a></li>
-          <li><a href="contact.html">お問合わせ</a></li>
-          <li><a href="#">プライバシーポリシー</a></li>
-          <li><a href="#">サイトマップ</a></li>
-        </ul>
-      </div>
-      <div class="related-org">
-        <h4>関連団体</h4>
-        <ul>
-          <li><a href="https://www.nichiyaku.or.jp/" target="_blank">日本薬剤師会</a></li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2024 川内薬剤会 All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  </div>
+  <div id="footer-include"></div>
+  <script>
+    fetch('header.html').then(res => res.text()).then(html => {
+      document.getElementById('header-include').innerHTML = html;
+    });
+    fetch('sidebar.html').then(res => res.text()).then(html => {
+      document.getElementById('sidebar-include').innerHTML = html;
+    });
+    fetch('footer.html').then(res => res.text()).then(html => {
+      document.getElementById('footer-include').innerHTML = html;
+    });
+  </script>
 </body>
 </html> 

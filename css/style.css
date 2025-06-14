@@ -13,6 +13,7 @@ html, body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   line-height: 1.6;
   color: #333;
+  padding-top: 60px;
 }
 
 /* ヘッダー */
@@ -96,25 +97,26 @@ nav ul li .submenu {
   position: absolute;
   top: 2.5rem;
   left: 0;
-  background: #fff;
+  background: #f4f4f4;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 4px;
-  min-width: 160px;
+  min-width: 180px;
   z-index: 1001;
+  padding: 0.5rem 0;
 }
 nav ul li:hover .submenu {
   display: block;
 }
-nav ul li .submenu li {
-  margin: 0;
-  padding: 0.5rem 1rem;
-}
 nav ul li .submenu li a {
   color: #2c3e50;
   font-weight: 400;
+  padding: 0.7rem 1.5rem;
+  display: block;
+  text-decoration: none;
 }
 nav ul li .submenu li a:hover {
-  color: #3498db;
+  background: #3498db;
+  color: #fff;
 }
 
 /* メインコンテンツ */
@@ -450,7 +452,7 @@ footer {
   box-shadow: 2px 0 8px rgba(0,0,0,0.05);
   padding: 30px 0;
   z-index: 100;
-  margin-top: 170px;
+  margin-top: 60px;
   padding-left: 0;
 }
 .sidebar ul {
@@ -519,4 +521,47 @@ footer {
   font-size: 0.95rem;
   color: #bdc3c7;
   margin-bottom: 1rem;
+}
+
+/* PDFリスト（休日当番）のカード型スタイル */
+.pdf-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 20px 0; /* 上部に余白を追加 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.pdf-list li {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+    padding: 16px 0;
+    margin: 0;
+}
+
+.pdf-list li:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transform: translateY(-2px) scale(1.03);
+    background: #f5faff;
+}
+
+.pdf-list a {
+    color: #218838;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-list a:hover {
+    color: #0066cc;
 } 

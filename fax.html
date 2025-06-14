@@ -7,42 +7,46 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="header"></header>
+  <div id="header-include"></div>
+  <div class="container">
+    <div id="sidebar-include"></div>
+    <div class="main-content">
+      <section>
+        <h2>FAXコーナー</h2>
+        <p class="fax-lead">川内薬剤師会では、厚生労働省が推進している医薬分業の方針に基づき、<br>
+          <span class="fax-lead-catch">「かかりつけ薬局でのお薬の受け取り」を推進しています。</span>
+        </p>
+        <ol>
+          <li><strong>医薬分業について</strong><br>
+            医師が処方箋を交付し、保険薬局の薬剤師が調剤を行うことを指します。独立した立場の医師と薬剤師がそれぞれの専門業務を分担することで医療の質を向上させることが目的です。この方針のもと、保険薬局の薬剤師は外来患者さんの安全・安心な薬物療法を担い、病院の薬剤師は入院患者さんの薬物療法を充実させることが求められています。
+          </li>
+          <li><strong>かかりつけ薬局について</strong><br>
+            お住まいの地域でかかりつけ薬局を決めておくと、保険薬局の薬剤師が他の病院で処方されたお薬についても把握し、飲み合わせをチェックすることができます。また、患者さんに合わせた薬剤の説明や夜間・休日のご相談にも対応できるため、医薬分業が目指す安全・安心な薬物療法を受けることが可能になります。
+          </li>
+          <li><strong>院外処方箋の有効期間</strong><br>
+            院外処方箋の有効期間は、発行日を含め4日間です。必ず4日以内に保険薬局へ提出してください。
+          </li>
+        </ol>
+        <div class="fax-contact-box">
+          <h3>済生会川内病院FAXコーナー</h3>
+          <p>？？？？？？？？？？<br>？？？？？？？？？？</p>
+          <h3>川内市民病院FAXコーナー</h3>
+          <p>TEL 0996-27-8392<br>FAX 0996-27-3398</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="footer-include"></div>
   <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
-  </script>
-  <main>
-    <section class="container">
-      <h2>FAXコーナー</h2>
-      <p class="fax-lead">川内薬剤師会では、厚生労働省が推進している医薬分業の方針に基づき、<br>
-        <span class="fax-lead-catch">「かかりつけ薬局でのお薬の受け取り」を推進しています。</span>
-      </p>
-      <ol>
-        <li><strong>医薬分業について</strong><br>
-          医師が処方箋を交付し、保険薬局の薬剤師が調剤を行うことを指します。独立した立場の医師と薬剤師がそれぞれの専門業務を分担することで医療の質を向上させることが目的です。この方針のもと、保険薬局の薬剤師は外来患者さんの安全・安心な薬物療法を担い、病院の薬剤師は入院患者さんの薬物療法を充実させることが求められています。
-        </li>
-        <li><strong>かかりつけ薬局について</strong><br>
-          お住まいの地域でかかりつけ薬局を決めておくと、保険薬局の薬剤師が他の病院で処方されたお薬についても把握し、飲み合わせをチェックすることができます。また、患者さんに合わせた薬剤の説明や夜間・休日のご相談にも対応できるため、医薬分業が目指す安全・安心な薬物療法を受けることが可能になります。
-        </li>
-        <li><strong>院外処方箋の有効期間</strong><br>
-          院外処方箋の有効期間は、発行日を含め4日間です。必ず4日以内に保険薬局へ提出してください。
-        </li>
-      </ol>
-      <div class="fax-contact-box">
-        <h3>済生会川内病院FAXコーナー</h3>
-        <p>？？？？？？？？？？<br>？？？？？？？？？？</p>
-        <h3>川内市民病院FAXコーナー</h3>
-        <p>TEL 0996-27-8392<br>FAX 0996-27-3398</p>
-      </div>
-    </section>
-  </main>
-  <footer id="footer"></footer>
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
+    fetch('header.html').then(res => res.text()).then(html => {
+      document.getElementById('header-include').innerHTML = html;
+    });
+    fetch('sidebar.html').then(res => res.text()).then(html => {
+      document.getElementById('sidebar-include').innerHTML = html;
+    });
+    fetch('footer.html').then(res => res.text()).then(html => {
+      document.getElementById('footer-include').innerHTML = html;
+    });
   </script>
 </body>
 </html> 
