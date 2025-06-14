@@ -34,11 +34,13 @@ header, .header-container {
 }
 
 .header-container {
+  display: flex;
+  align-items: center;
   padding-left: 0;
 }
 
 .header-logo-large {
-  height: 80px;
+  height: 160px;
   margin-right: 1.5rem;
 }
 
