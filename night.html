@@ -42,7 +42,7 @@
         const ul = document.getElementById('night-pdf-list');
         pdfs.forEach(f => {
           const li = document.createElement('li');
-          li.innerHTML = `<a href='${f.path}' target='_blank'>${f.name.replace('.pdf','')}</a>`;
+          li.innerHTML = `<a href='${f.download_url}' target='_blank'>${f.name.replace('.pdf','')}</a>`;
           ul.appendChild(li);
         });
       });
