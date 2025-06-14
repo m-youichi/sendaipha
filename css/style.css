@@ -37,11 +37,15 @@ header, .header-container {
   padding-left: 0;
 }
 
-.header-title-group {
+.header-logo-large {
+  height: 80px;
+  margin-right: 1.5rem;
+}
+
+.header-title-group-row {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 32px;
 }
 
 .main-title {
