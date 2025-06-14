@@ -239,16 +239,43 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    /* サイドバーを上部に移動し、横幅いっぱいに */
+  }
+  .main-content {
+    padding: 12px;
+  }
   .header-container {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0 0 0;
+  }
+  .header-logo-large {
+    margin: 0 auto 8px auto;
+    display: block;
+  }
+  .main-title, .sub-title {
+    text-align: center;
+    width: 100%;
+  }
+  nav.global-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  nav.global-nav ul li a {
+    padding: 1rem 0.5rem;
+    font-size: 1.1rem;
     text-align: center;
   }
-  nav ul {
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-  nav ul li {
-    margin: 0.5rem 0;
+  .pdf-list li {
+    max-width: 100%;
+    font-size: 1em;
   }
   .footer-links ul {
     flex-direction: column;
