@@ -479,4 +479,44 @@ footer {
   flex: 1;
   margin-left: 0;
   padding: 40px;
+}
+
+.footer-global-nav {
+  background: #1b8c3b;
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+}
+.footer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer-card {
+  display: inline-block;
+  background: #fff;
+  color: #1b8c3b;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.2rem 2.5rem;
+  text-decoration: none;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.footer-card:hover {
+  background: #eaf6fb;
+  color: #15702e;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.footer-office-info {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 2rem 0 1rem 0;
+  color: #2c3e50;
+}
+.copyright {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #bdc3c7;
+  margin-bottom: 1rem;
 } 
