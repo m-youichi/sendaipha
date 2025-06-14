@@ -92,6 +92,8 @@ main, section, .container {
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -445,6 +447,7 @@ footer {
   background: #f0f8f5;
 }
 .main-content {
-  margin-left: 260px;
+  flex: 1;
+  margin-left: 0;
   padding: 40px;
 } 
