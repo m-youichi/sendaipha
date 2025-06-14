@@ -1,87 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>サイドバー</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f7f9fa;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 240px;
-      height: 100vh;
-      background: #fff;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.05);
-      padding: 30px 0;
-      z-index: 100;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .sidebar li {
-      margin: 18px 0;
-      text-align: center;
-    }
-    .sidebar a {
-      text-decoration: none;
-      color: #228b22;
-      font-weight: bold;
-      font-size: 1.1em;
-      display: block;
-      padding: 10px 0;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .sidebar a:hover {
-      background: #f0f8f5;
-    }
-    .main-content {
-      margin-left: 260px;
-      padding: 40px;
-    }
-  </style>
-</head>
-<body>
-  <div class="sidebar" id="sidebar"></div>
-  <div class="main-content">
-    <h1>メインコンテンツ</h1>
-    <p>ここにページごとの内容を記述してください。</p>
-  </div>
-  <script>
-    // メニュー項目の配列
-    const menuItems = [
-      { label: "休日当番", href: "#" },
-      { label: "夜間休日輪番", href: "#" },
-      { label: "在宅可能薬局リスト", href: "#" },
-      { label: "フレイル予防講座", href: "#" },
-      { label: "会員薬局検索", href: "#" },
-      { label: "学校薬剤師", href: "#" },
-      { label: "災害対策", href: "#" },
-      { label: "薬薬連携", href: "#" },
-      { label: "研修会", href: "#" },
-      { label: "カゴネット", href: "#" },
-      { label: "臨島医療調査", href: "#" }
-    ];
-
-    // サイドバーのHTMLを生成
-    const sidebar = document.getElementById('sidebar');
-    const ul = document.createElement('ul');
-    menuItems.forEach(item => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.textContent = item.label;
-      a.href = item.href;
-      li.appendChild(a);
-      ul.appendChild(li);
-    });
-    sidebar.appendChild(ul);
-  </script>
-</body>
-</html> 
+<div class="sidebar">
+  <ul>
+    <li><a href="holiday.html">休日当番</a></li>
+    <li><a href="night.html">夜間休日輪番</a></li>
+    <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+    <li><a href="frail.html">フレイル予防講座</a></li>
+    <li><a href="search.html">会員薬局検索</a></li>
+    <li><a href="school.html">学校薬剤師</a></li>
+    <li><a href="disaster.html">災害対策</a></li>
+    <li><a href="collab.html">薬薬連携</a></li>
+    <li><a href="workshop.html">研修会</a></li>
+    <li><a href="kagonet.html">カゴネット</a></li>
+    <li><a href="koshiki.html">甑島医療調査</a></li>
+  </ul>
+</div> 
