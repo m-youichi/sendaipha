@@ -3,24 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>川内薬剤師会</title>
+  <title>一般社団法人川内薬剤師会</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="img/logo.png" alt="川内薬剤師会ロゴ" style="height:60px;margin-right:1rem;">
-      <h1>川内薬剤師会</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">当会について</a></li>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#pharmacy">休日当番薬局</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header id="header"></header>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+  </script>
 
   <main>
     <section id="top">
@@ -30,70 +22,119 @@
       </div>
     </section>
 
+    <section id="news">
+      <div class="container">
+        <h2>お知らせ</h2>
+        <ul class="news-list">
+          <li>お知らせ1</li>
+          <li>お知らせ2</li>
+          <li>お知らせ3</li>
+          <li>お知らせ4</li>
+          <li>お知らせ5</li>
+          <li>お知らせ6</li>
+          <li>お知らせ7</li>
+          <li>お知らせ8</li>
+          <li>お知らせ9</li>
+          <li>お知らせ10</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- サブページカード一覧 -->
+    <section id="feature-cards">
+      <div class="container cards-container">
+        <a class="feature-card" href="holiday.html">休日当番</a>
+        <a class="feature-card" href="night.html">夜間休日輪番</a>
+        <a class="feature-card" href="homecare.html">在宅可能薬局リスト</a>
+        <a class="feature-card" href="frail.html">フレイル予防講座</a>
+        <a class="feature-card" href="search.html">会員薬局検索</a>
+        <a class="feature-card" href="school.html">学校薬剤師</a>
+        <a class="feature-card" href="disaster.html">災害対策</a>
+        <a class="feature-card" href="collab.html">薬薬連携</a>
+        <a class="feature-card" href="workshop.html">研修会</a>
+        <a class="feature-card" href="kagonet.html">カゴネット</a>
+        <a class="feature-card" href="koshiki.html">甑島医療調査</a>
+      </div>
+    </section>
+
     <section id="about">
       <div class="container">
         <h2>当会について</h2>
-        <h3>役員一覧</h3>
-        <ul>
-          <li>会長：藤井　規好</li>
-          <li>副会長：阿久根憲造　野元　健一　井上　和啓</li>
-          <li>専務理事：川内　友紀</li>
-          <li>会計：川内　友紀</li>
-          <li>社会保険地区委員：渡邊　雅紀</li>
-          <li>学校薬剤師担当者：野元　健一</li>
-          <li>ＩＴ担当者：川畑　英孝</li>
-          <li>在宅医療担当者：東　伸吾</li>
-          <li>薬学生実務実習：渡邊　雅紀</li>
-          <li>災害薬事担当者：門柳隆太郎</li>
-          <li>薬剤師連盟支部長：東　伸吾</li>
-        </ul>
-        <h3>事務局所在地</h3>
+        <section id="greeting">
+          <h3>会長あいさつ</h3>
+          <p>（会長あいさつ文をここに記載）</p>
+        </section>
+        <section id="officers">
+          <h3>役員一覧</h3>
+          <ul>
+            <li>会長：藤井　規好</li>
+            <li>副会長：阿久根憲造　野元　健一　井上　和啓</li>
+            <li>専務理事：川内　友紀</li>
+            <li>会計：川内　友紀</li>
+            <li>社会保険地区委員：渡邊　雅紀</li>
+            <li>学校薬剤師担当者：野元　健一</li>
+            <li>ＩＴ担当者：川畑　英孝</li>
+            <li>在宅医療担当者：東　伸吾</li>
+            <li>薬学生実務実習：渡邊　雅紀</li>
+            <li>災害薬事担当者：門柳隆太郎</li>
+            <li>薬剤師連盟支部長：東　伸吾</li>
+          </ul>
+        </section>
+        <section id="rules">
+          <h3>定款</h3>
+          <p>（定款の内容やPDFへのリンクをここに記載）</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="office">
+      <div class="container">
+        <h2>事務局</h2>
         <p>〒895-0027<br>薩摩川内市西向田町17-11</p>
-        <h3>連絡先</h3>
         <p>TEL：0996(41)5019　FAX：0996(22)4449</p>
       </div>
     </section>
 
-    <section id="news">
+    <section id="fax">
       <div class="container">
-        <h2>お知らせ</h2>
-        <div class="news-list">
-          <!-- お知らせの内容は後で追加 -->
-        </div>
+        <h2>FAXコーナー</h2>
+        <p>（FAXコーナーの案内や資料ダウンロードリンク等をここに記載）</p>
       </div>
     </section>
 
-    <section id="pharmacy">
+    <section id="contact">
       <div class="container">
-        <h2>休日当番薬局</h2>
-        <div class="pharmacy-info">
-          <p>最新の休日当番薬局情報は、下記の広報をご覧ください。</p>
-          <a href="広報497号_P08_当番医-2.pdf" target="_blank" rel="noopener">広報497号（PDF）</a>
-        </div>
+        <h2>お問い合せ</h2>
+        <p>（お問い合わせ方法やフォームへのリンク等をここに記載）</p>
+      </div>
+    </section>
+
+    <section id="submenu">
+      <div class="container">
+        <h2>サブメニュー</h2>
+        <ul class="submenu-list">
+          <li><a href="#holiday">休日当番</a></li>
+          <li><a href="#night">夜間休日輪番</a></li>
+          <li><a href="#homecare">在宅可能薬局リスト</a></li>
+          <li><a href="#frail">フレイル予防講座</a></li>
+          <li><a href="https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2400/initialize/%E8%96%A9%E6%91%A9%E5%B7%9D%E5%86%85%E5%B8%82/?pref=46&sjk=2" target="_blank">会員薬局検索</a></li>
+          <li><a href="#school">学校薬剤師</a></li>
+          <li><a href="#disaster">災害対策</a></li>
+          <li><a href="#collab">薬薬連携</a></li>
+          <li><a href="#workshop">研修会</a></li>
+          <li><a href="https://kago-net.jp/" target="_blank">カゴネット</a></li>
+          <li><a href="#koshiki">甑島医療調査</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-info">
-        <h3>川内薬剤師会</h3>
-        <p>〒895-0000 鹿児島県薩摩川内市〇〇町〇〇</p>
-        <p>TEL：0996-XX-XXXX</p>
-        <p>FAX：0996-XX-XXXX</p>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="#about">当会について</a></li>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#pharmacy">休日当番薬局</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2024 川内薬剤師会 All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <footer id="footer"></footer>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 </body>
 </html>
+
