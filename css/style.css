@@ -15,6 +15,12 @@ html, body {
   color: #333;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* PC用の上部余白（横並びグローバルナビ） */
 @media (min-width: 1024px) {
   body {
@@ -31,14 +37,22 @@ html, body {
 
 /* PC用サイドバー固定表示 */
 @media (min-width: 1024px) {
-  /* PC用：サイドバーラッパーを通常の要素として配置 */
+  /* PC用：コンテナをflexboxレイアウトに変更 */
+  .container {
+    display: flex !important;
+    max-width: none !important;
+    min-height: calc(100vh - 140px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* PC用：サイドバーラッパーを固定幅で配置 */
   .sidebar-wrapper {
+    flex: 0 0 250px !important; /* 固定幅250px */
     position: static !important;
-    width: 250px !important;
     height: auto !important;
     pointer-events: auto !important;
-    z-index: 1000 !important; /* ヘッダー・フッターより低い優先度 */
-    margin-top: 0 !important; /* bodyのpadding-topで既に上部余白が確保されている */
+    z-index: 1000 !important;
   }
   
   /* PC用：サイドバーを常に表示 */
@@ -47,20 +61,23 @@ html, body {
     opacity: 1 !important;
     visibility: visible !important;
     position: static !important;
-    left: auto !important;
-    top: auto !important;
     width: 100% !important;
-    height: auto !important; /* 内容に合わせて高さ自動調整 */
-    max-height: none !important; /* 最大高さ制限を解除 */
-    overflow: visible !important; /* 全方向のスクロールを無効化 */
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    z-index: 1000 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
     background: #fff !important;
     border-right: 1px solid #ddd !important;
     box-shadow: 2px 0 8px rgba(0,0,0,0.1) !important;
     padding: 1rem 0 2rem 0 !important;
-    margin-top: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* PC用：メインコンテンツを残りの幅で表示 */
+  .main-content {
+    flex: 1 !important; /* 残りの幅を全て使用 */
+    margin-left: 0 !important;
+    padding: 2rem !important;
+    min-width: 0 !important; /* flexアイテムの最小幅を0に */
   }
   
   /* PC用：トグルボタンを非表示 */
@@ -68,41 +85,31 @@ html, body {
     display: none !important;
   }
   
-  /* PC用：メインコンテンツを右にずらす */
-  .main-content {
-    margin-left: 150px !important;
-    padding-left: 2rem !important;
-  }
-  
   /* PC用：オーバーレイを非表示 */
   .sidebar-overlay {
     display: none !important;
   }
   
-  /* PC用：コンテナの調整 */
-  .container {
-    max-width: none !important;
-    position: relative !important;
-    min-height: calc(100vh - 140px) !important; /* 最小高さを確保 */
-  }
-  
-  /* PC用：bodyの最小高さを確保 */
-  body {
-    min-height: 100vh !important; /* 画面全体の最小高さを確保 */
-  }
-  
-  /* PC用：フッターを全幅表示、コンテンツの下に自然配置 */
+  /* PC用：フッターを全幅表示 */
   footer {
     position: relative !important;
     width: 100% !important;
     margin-left: 0 !important;
-    z-index: 10000 !important; /* サイドバーより高い優先度 */
-    clear: both !important; /* フロートをクリア */
+    z-index: 10000 !important;
+    clear: both !important;
   }
 }
 
 /* タブレット・スマホ用（1023px以下）：現在のトグル機能を維持 */
 @media (max-width: 1023px) {
+  /* モバイル用：コンテナを通常のブロックレイアウトに */
+  .container {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
   /* サイドバーラッパーの設定 */
   .sidebar-wrapper {
     position: fixed !important;
@@ -170,7 +177,7 @@ html, body {
   /* メインコンテンツは通常通り */
   .main-content {
     margin-left: 0 !important;
-    padding-left: 1rem !important;
+    padding: 1rem !important;
   }
 }
 
@@ -265,13 +272,12 @@ main, section, .container {
   margin-top: 20px; /* ヘッダー固定分はbodyのpadding-topで対応済み */
 }
 
+/* 基本的なcontainerスタイル（メディアクエリで上書きされる） */
 .container {
-  display: flex;
-  flex-direction: row;
   width: 100%;
   max-width: none;
   margin: 0;
-  align-items: flex-start;
+  flex: 1;
 }
 
 /* お知らせ欄 */
@@ -416,6 +422,8 @@ footer {
   background-color: #2c3e50;
   color: #fff;
   padding: 3rem 0 1rem 0;
+  width: 100%;
+  margin-top: auto;
 }
 .footer-links ul {
   list-style: none;
