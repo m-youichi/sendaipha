@@ -1,29 +1,20 @@
-<div class="sidebar">
-  <ul>
-    <li style="visibility:hidden;">ダミー</li>
-    <li><a href="holiday.html">休日当番</a></li>
-    <li><a href="night.html">夜間輪番</a></li>
-    <li><a href="homecare.html">在宅可能薬局リスト</a></li>
-    <li><a href="frail.html">フレイル予防講座</a></li>
-    <li><a href="search.html">会員薬局検索</a></li>
-    <li><a href="school.html">学校薬剤師</a></li>
-    <li><a href="disaster.html">災害対策</a></li>
-    <li><a href="collab.html">薬薬連携</a></li>
-    <li><a href="workshop.html">研修会</a></li>
-    <li><a href="kagonet.html">カゴネット</a></li>
-    <li><a href="koshiki.html">甑島医療調査</a></li>
-  </ul>
+<div class="sidebar-wrapper">
+  <nav class="sidebar">
+    <button id="sidebar-toggle-inner" class="sidebar-toggle-inner" aria-label="メニューを閉じる/開く">▶</button>
+    <ul>
+      <li style="visibility:hidden;">ダミー</li>
+      <li><a href="holiday.html">休日当番</a></li>
+      <li><a href="night.html">夜間輪番</a></li>
+      <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+      <li><a href="frail.html">フレイル予防講座</a></li>
+      <li><a href="search.html">会員薬局検索</a></li>
+      <li><a href="school.html">学校薬剤師</a></li>
+      <li><a href="disaster.html">災害対策</a></li>
+      <li><a href="collab.html">薬薬連携</a></li>
+      <li><a href="workshop.html">研修会</a></li>
+      <li><a href="kagonet.html">カゴネット</a></li>
+      <li><a href="koshiki.html">甑島医療調査</a></li>
+    </ul>
+  </nav>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const links = document.querySelectorAll('.sidebar a');
-  const path = location.pathname.split('/').pop().replace(/\?.*$/, ''); // クエリ除去
-  links.forEach(link => {
-    // .htmlの有無を無視して比較
-    if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
-      link.classList.add('active');
-    }
-  });
-});
-</script> 
+<div class="sidebar-overlay"></div> 

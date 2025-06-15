@@ -4,38 +4,197 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会員薬局検索 | 川内薬剤師会</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
-  <div id="header-include"></div>
+  <header>
+    <div class="header-container">
+      <img src="img/SPA.png" alt="一般社団法人川内薬剤師会ロゴ" class="header-logo-large">
+      <div class="header-title-group-row">
+        <h1 class="main-title"><a href="index.html" style="color:inherit;text-decoration:none;">一般社団法人川内薬剤師会</a></h1>
+        <div class="sub-title">Sendai Pharmaceutical Association</div>
+      </div>
+    </div>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-submenu">
+          <a href="about.html">組織概要</a>
+          <ul class="submenu">
+            <li><a href="greeting.html">会長あいさつ</a></li>
+            <li><a href="officers.html">役員一覧</a></li>
+            <li><a href="rules.html">定款</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">薬局検索</a></li>
+        <li><a href="fax.html">FAXコーナー</a></li>
+        <li><a href="contact.html">事務局</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <button id="sidebar-toggle">
+    <div class="arrow-toggle">▶</div>
+  </button>
+  
   <div class="container">
-    <div id="sidebar-include"></div>
+    <div class="sidebar-wrapper">
+      <nav class="sidebar">
+        <ul>
+          <li style="visibility:hidden;">ダミー</li>
+          <li><a href="holiday.html">休日当番</a></li>
+          <li><a href="night.html">夜間輪番</a></li>
+          <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+          <li><a href="frail.html">フレイル予防講座</a></li>
+          <li><a href="search.html">薬局検索</a></li>
+          <li><a href="school.html">学校薬剤師</a></li>
+          <li><a href="disaster.html">災害対策</a></li>
+          <li><a href="collab.html">薬薬連携</a></li>
+          <li><a href="workshop.html">研修会</a></li>
+          <li><a href="kagonet.html">カゴネット</a></li>
+          <li><a href="koshiki.html">甑島医療調査</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-overlay"></div>
     <div class="main-content">
       <section>
-        <h2>会員薬局検索</h2>
-        <p><a href="https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2400/initialize/%E8%96%A9%E6%91%A9%E5%B7%9D%E5%86%85%E5%B8%82/?pref=46&sjk=2" target="_blank">医療情報ネットのページへ</a></p>
+        <div style="text-align: center; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 3rem 2rem; border-radius: 12px; margin-bottom: 3rem;">
+          <div style="display: inline-block; background: #2196f3; color: #fff; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem;">健康・医療</div>
+          <h2 style="color: #1565c0; font-size: 2.2rem; margin-bottom: 1rem;">医療機能情報提供制度について</h2>
+        </div>
+        
+        <div style="background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+          <p style="line-height: 1.8; color: #333; margin-bottom: 2rem; font-size: 1.1rem;">
+            本ページは、医療機能情報提供制度及び同制度により全国の医療機関を検索することができる「医療情報ネット（ナビィ）」について紹介するものです。
+          </p>
+          
+          <div style="margin-bottom: 2rem;">
+            <p style="color: #1976d2; font-size: 1.1rem; margin-bottom: 1rem;">
+              ＞<a href="https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2400/initialize/%E8%96%A9%E6%91%A9%E5%B7%9D%E5%86%85%E5%B8%82/?pref=46&sjk=2" target="_blank" style="color: #1976d2; text-decoration: underline;">医療機能情報提供制度（医療機関向けページ）</a>
+            </p>
+          </div>
+          
+          <hr style="border: none; border-top: 2px solid #e0e0e0; margin: 2rem 0;">
+          
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1565c0; font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: bold;">
+              医療情報ネット（ナビィ）は診療日や診療科目といった一般的な情報に加え、対応可能な疾患・治療内容、提供しているサービスなどさまざまな情報から、全国の医療機関を検索することのできるシステムです。
+            </h3>
+          </div>
+        </div>
+        
+        <div style="background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+          <div style="border-left: 4px solid #2196f3; padding-left: 1.5rem; margin-bottom: 2rem;">
+            <h3 style="color: #1565c0; font-size: 1.5rem; margin-bottom: 1rem;">医療情報ネット（ナビィ）</h3>
+          </div>
+          
+          <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); border: 2px solid #2196f3; border-radius: 12px; padding: 2rem; text-align: center; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+              <div style="flex: 1; min-width: 300px;">
+                <h4 style="color: #1565c0; font-size: 1.8rem; margin-bottom: 1rem; font-weight: bold;">
+                  全国の医療機関を<br>
+                  医療情報ネット（ナビィ）で<br>
+                  検索できます。
+                </h4>
+              </div>
+              <div style="flex: 1; min-width: 200px; text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                  <div style="font-size: 3rem; color: #2196f3;">🏥</div>
+                  <div style="font-size: 2rem; color: #2196f3;">💊</div>
+                  <div style="font-size: 3rem; color: #1976d2;">👨‍⚕️</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p style="text-align: center; color: #666; font-size: 1rem; margin-bottom: 2rem;">
+            バナーをクリックすると医療情報ネット（ナビィ※）にジャンプします。
+          </p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2400/initialize/%E8%96%A9%E6%91%A9%E5%B7%9D%E5%86%85%E5%B8%82/?pref=46&sjk=2" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%); color: #fff; padding: 18px 45px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3); transition: all 0.3s ease; border: none;">
+            🔍 医療情報ネット（ナビィ）で薬局を検索
+          </a>
+        </div>
+        
+        <div style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; border-left: 4px solid #2196f3;">
+          <h4 style="color: #1565c0; margin-bottom: 1rem;">薩摩川内市の薬局検索について</h4>
+          <p style="color: #666; line-height: 1.6; margin: 0;">
+            上記リンクから薩摩川内市内の薬局を検索できます。営業時間、対応可能なサービス、設備情報など詳細な情報をご確認いただけます。
+          </p>
+        </div>
       </section>
     </div>
   </div>
-  <div id="footer-include"></div>
+  
+  <footer>
+    <div class="footer-global-nav">
+      <div class="footer-cards">
+        <a class="footer-card" href="https://kayaku.jp/" target="_blank">鹿児島県薬剤師会</a>
+        <a class="footer-card" href="https://www.nichiyaku.or.jp/" target="_blank">日本薬剤師会</a>
+      </div>
+      <div class="footer-office-info">
+        <p>〒895-0027<br>薩摩川内市西向田町17-11<br>TEL：0996(41)5019　FAX：0996(22)4449</p>
+      </div>
+    </div>
+    <div class="copyright">&copy; 一般社団法人川内薬剤師会</div>
+  </footer>
+  
   <script>
-    fetch('header.html').then(res => res.text()).then(html => {
-      document.getElementById('header-include').innerHTML = html;
-    });
-    fetch('sidebar.html').then(res => res.text()).then(html => {
-      document.getElementById('sidebar-include').innerHTML = html;
-      // サイドバーの現在ページにactiveクラスを付与
-      const links = document.querySelectorAll('.sidebar a');
-      const path = location.pathname.split('/').pop();
-      links.forEach(link => {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
+    // グローバルナビのサブメニュー制御
+    document.addEventListener('DOMContentLoaded', function() {
+      const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+      hasSubmenuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        
+        item.addEventListener('mouseenter', function() {
+          item.classList.add('submenu-open');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          item.classList.remove('submenu-open');
+        });
       });
     });
-    fetch('footer.html').then(res => res.text()).then(html => {
-      document.getElementById('footer-include').innerHTML = html;
-    });
+    
+    // サイドバー制御
+    console.log("sidebar.js loaded");
+    
+    function waitForSidebarAndInit() {
+      const btn = document.getElementById('sidebar-toggle');
+      const arrow = btn.querySelector('.arrow-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (btn && sidebar && overlay) {
+        // 現在ページにactiveクラスを付与
+        const links = document.querySelectorAll('.sidebar a');
+        const path = location.pathname.split('/').pop().replace(/\?.*$/, '');
+        links.forEach(link => {
+          if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
+            link.classList.add('active');
+          }
+        });
+        
+        btn.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          overlay.style.display = sidebar.classList.contains('open') ? 'block' : 'none';
+          arrow.textContent = sidebar.classList.contains('open') ? '◀' : '▶';
+          arrow.classList.toggle('active', sidebar.classList.contains('open'));
+        });
+        
+        overlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          overlay.style.display = 'none';
+          arrow.textContent = '▶';
+          arrow.classList.remove('active');
+        });
+      } else {
+        setTimeout(waitForSidebarAndInit, 50);
+      }
+    }
+    waitForSidebarAndInit();
   </script>
 </body>
 </html> 

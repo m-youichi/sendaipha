@@ -4,38 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>定款 | 川内薬剤師会</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
-  <div id="header-include"></div>
+  <header>
+    <div class="header-container">
+      <img src="img/SPA.png" alt="一般社団法人川内薬剤師会ロゴ" class="header-logo-large">
+      <div class="header-title-group-row">
+        <h1 class="main-title"><a href="index.html" style="color:inherit;text-decoration:none;">一般社団法人川内薬剤師会</a></h1>
+        <div class="sub-title">Sendai Pharmaceutical Association</div>
+      </div>
+    </div>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-submenu">
+          <a href="about.html">組織概要</a>
+          <ul class="submenu">
+            <li><a href="greeting.html">会長あいさつ</a></li>
+            <li><a href="officers.html">役員一覧</a></li>
+            <li><a href="rules.html">定款</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">薬局検索</a></li>
+        <li><a href="fax.html">FAXコーナー</a></li>
+        <li><a href="contact.html">事務局</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <button id="sidebar-toggle">
+    <div class="arrow-toggle">▶</div>
+  </button>
+  
   <div class="container">
-    <div id="sidebar-include"></div>
+    <div class="sidebar-wrapper">
+      <nav class="sidebar">
+        <ul>
+          <li style="visibility:hidden;">ダミー</li>
+          <li><a href="holiday.html">休日当番</a></li>
+          <li><a href="night.html">夜間輪番</a></li>
+          <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+          <li><a href="frail.html">フレイル予防講座</a></li>
+          <li><a href="search.html">薬局検索</a></li>
+          <li><a href="school.html">学校薬剤師</a></li>
+          <li><a href="disaster.html">災害対策</a></li>
+          <li><a href="collab.html">薬薬連携</a></li>
+          <li><a href="workshop.html">研修会</a></li>
+          <li><a href="kagonet.html">カゴネット</a></li>
+          <li><a href="koshiki.html">甑島医療調査</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-overlay"></div>
     <div class="main-content">
       <section>
         <h2>定款</h2>
-        <iframe src="一般社団法人川内薬剤師会定款確定版.pdf" width="100%" height="600" style="border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"></iframe>
+        <p style="margin-bottom: 1rem;">
+          <a href="一般社団法人川内薬剤師会定款確定版.pdf" target="_blank" style="color: #228b22; font-weight: bold;">
+            📄 PDFファイルを別ウィンドウで開く
+          </a>
+        </p>
+        <div style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <iframe 
+            src="一般社団法人川内薬剤師会定款確定版.pdf" 
+            width="100%" 
+            height="100%" 
+            style="border: none;"
+            title="一般社団法人川内薬剤師会定款">
+            <p>お使いのブラウザはPDFの表示に対応していません。<a href="一般社団法人川内薬剤師会定款確定版.pdf" target="_blank">こちらからPDFをダウンロード</a>してください。</p>
+          </iframe>
+        </div>
       </section>
     </div>
   </div>
-  <div id="footer-include"></div>
+  
+  <footer>
+    <div class="footer-global-nav">
+      <div class="footer-cards">
+        <a class="footer-card" href="https://kayaku.jp/" target="_blank">鹿児島県薬剤師会</a>
+        <a class="footer-card" href="https://www.nichiyaku.or.jp/" target="_blank">日本薬剤師会</a>
+      </div>
+      <div class="footer-office-info">
+        <p>〒895-0027<br>薩摩川内市西向田町17-11<br>TEL：0996(41)5019　FAX：0996(22)4449</p>
+      </div>
+    </div>
+    <div class="copyright">&copy; 一般社団法人川内薬剤師会</div>
+  </footer>
+  
   <script>
-    fetch('header.html').then(res => res.text()).then(html => {
-      document.getElementById('header-include').innerHTML = html;
-    });
-    fetch('sidebar.html').then(res => res.text()).then(html => {
-      document.getElementById('sidebar-include').innerHTML = html;
-      // サイドバーの現在ページにactiveクラスを付与
-      const links = document.querySelectorAll('.sidebar a');
-      const path = location.pathname.split('/').pop();
-      links.forEach(link => {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
+    // グローバルナビのサブメニュー制御
+    document.addEventListener('DOMContentLoaded', function() {
+      const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+      hasSubmenuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        
+        item.addEventListener('mouseenter', function() {
+          item.classList.add('submenu-open');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          item.classList.remove('submenu-open');
+        });
       });
     });
-    fetch('footer.html').then(res => res.text()).then(html => {
-      document.getElementById('footer-include').innerHTML = html;
-    });
+    
+    // サイドバー制御
+    console.log("sidebar.js loaded");
+    
+    function waitForSidebarAndInit() {
+      const btn = document.getElementById('sidebar-toggle');
+      const arrow = btn.querySelector('.arrow-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (btn && sidebar && overlay) {
+        // 現在ページにactiveクラスを付与
+        const links = document.querySelectorAll('.sidebar a');
+        const path = location.pathname.split('/').pop().replace(/\?.*$/, '');
+        links.forEach(link => {
+          if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
+            link.classList.add('active');
+          }
+        });
+        
+        btn.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          overlay.style.display = sidebar.classList.contains('open') ? 'block' : 'none';
+          arrow.textContent = sidebar.classList.contains('open') ? '◀' : '▶';
+          arrow.classList.toggle('active', sidebar.classList.contains('open'));
+        });
+        
+        overlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          overlay.style.display = 'none';
+          arrow.textContent = '▶';
+          arrow.classList.remove('active');
+        });
+      } else {
+        setTimeout(waitForSidebarAndInit, 50);
+      }
+    }
+    waitForSidebarAndInit();
   </script>
 </body>
 </html> 

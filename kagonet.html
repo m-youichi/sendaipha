@@ -4,39 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>カゴネット | 川内薬剤師会</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
-  <div id="header-include"></div>
+  <header>
+    <div class="header-container">
+      <img src="img/SPA.png" alt="一般社団法人川内薬剤師会ロゴ" class="header-logo-large">
+      <div class="header-title-group-row">
+        <h1 class="main-title"><a href="index.html" style="color:inherit;text-decoration:none;">一般社団法人川内薬剤師会</a></h1>
+        <div class="sub-title">Sendai Pharmaceutical Association</div>
+      </div>
+    </div>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-submenu">
+          <a href="about.html">組織概要</a>
+          <ul class="submenu">
+            <li><a href="greeting.html">会長あいさつ</a></li>
+            <li><a href="officers.html">役員一覧</a></li>
+            <li><a href="rules.html">定款</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">薬局検索</a></li>
+        <li><a href="fax.html">FAXコーナー</a></li>
+        <li><a href="contact.html">事務局</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <button id="sidebar-toggle">
+    <div class="arrow-toggle">▶</div>
+  </button>
+  
   <div class="container">
-    <div id="sidebar-include"></div>
+    <div class="sidebar-wrapper">
+      <nav class="sidebar">
+        <ul>
+          <li style="visibility:hidden;">ダミー</li>
+          <li><a href="holiday.html">休日当番</a></li>
+          <li><a href="night.html">夜間輪番</a></li>
+          <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+          <li><a href="frail.html">フレイル予防講座</a></li>
+          <li><a href="search.html">薬局検索</a></li>
+          <li><a href="school.html">学校薬剤師</a></li>
+          <li><a href="disaster.html">災害対策</a></li>
+          <li><a href="collab.html">薬薬連携</a></li>
+          <li><a href="workshop.html">研修会</a></li>
+          <li><a href="kagonet.html">カゴネット</a></li>
+          <li><a href="koshiki.html">甑島医療調査</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-overlay"></div>
     <div class="main-content">
       <section>
-        <h2>カゴネット</h2>
-        <p>ただいま準備中</p>
-        <p><a href="https://kago-net.jp/" target="_blank">外部リンク：カゴネットはこちら</a></p>
+        <div style="text-align: center; background: linear-gradient(135deg, #e8f5e8 0%, #d4f1d4 100%); padding: 3rem 2rem; border-radius: 12px; margin-bottom: 3rem;">
+          <h2 style="color: #2c5530; font-size: 2.5rem; margin-bottom: 1rem;">かごネットとは</h2>
+        </div>
+        
+        <div style="background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+          <div style="border-left: 4px solid #4CAF50; padding-left: 1.5rem; margin-bottom: 2rem;">
+            <h3 style="color: #2c5530; font-size: 1.5rem; margin-bottom: 1rem;">かごネットのサービスについて</h3>
+            <p style="color: #4CAF50; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">医療・介護現場の円滑な情報共有を地域全体で実現します</p>
+          </div>
+          
+          <p style="line-height: 1.8; color: #333; margin-bottom: 2rem;">
+            かごネットは、病院、診療所、歯科、調剤薬局、介護事業所等を相互につなぐ医療情報ネットワークです。<br>
+            これまで複数の医療機関に分散されていた患者さんの医療情報を連携カルテとして共有することで、<br>
+            診断や治療、調剤などを行う際により正確な診断、安全な処置などができるようになります。
+          </p>
+        </div>
+        
+        <div style="background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+          <div style="border-left: 4px solid #4CAF50; padding-left: 1.5rem; margin-bottom: 2rem;">
+            <h3 style="color: #2c5530; font-size: 1.5rem; margin-bottom: 1rem;">かごネットカードについて</h3>
+            <p style="color: #4CAF50; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">かごネットのサービスをスムーズにご利用頂くためのカードです</p>
+          </div>
+          
+          <div style="margin-bottom: 2rem;">
+            <p style="line-height: 1.8; color: #333; margin-bottom: 1rem;">
+              かごネット同意書記入時に申請のチェックをして頂くだけで簡単に発行できます。<br>
+              かごネットカードの発行やご利用は全て<strong style="color: #e74c3c;">無料</strong>です。参加施設にかごネットカードをご提示頂ければスムーズにサービスをご利用できます。
+            </p>
+          </div>
+          
+          <div style="display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 1.5rem; width: 200px; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <div>
+                  <div style="color: #007bff; font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                  <div style="color: #333; font-weight: bold;">かごネットカード</div>
+                  <div style="color: #666; font-size: 0.9rem;">0012345</div>
+                </div>
+              </div>
+              <div style="background: #ffb3ba; color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">表面</div>
+            </div>
+            
+            <div style="text-align: center;">
+              <div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 1.5rem; width: 200px; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <div style="font-size: 0.8rem; color: #666; text-align: left; line-height: 1.4;">
+                  <div style="font-weight: bold; margin-bottom: 0.5rem;">かごネット参加同意カード</div>
+                  <div>●医療機関を受診する際は、このカードをご提示ください。</div>
+                  <div>●あなたの診療情報は、カードを提示した施設にのみ閲覧されます。</div>
+                  <div>●緊急時には、カードを提示しなくても閲覧されることがあります。</div>
+                  <div style="margin-top: 0.5rem; font-weight: bold;">【かごネット運営事務局】</div>
+                  <div>kagonet-office@pcmed.jp</div>
+                </div>
+              </div>
+              <div style="background: #ffb3ba; color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">裏面</div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://kago-net.jp/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); color: #fff; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3); transition: all 0.3s ease; border: none;">
+            📋 詳細はこちら（かごネット公式サイト）
+          </a>
+        </div>
       </section>
     </div>
   </div>
-  <div id="footer-include"></div>
+  
+  <footer>
+    <div class="footer-global-nav">
+      <div class="footer-cards">
+        <a class="footer-card" href="https://kayaku.jp/" target="_blank">鹿児島県薬剤師会</a>
+        <a class="footer-card" href="https://www.nichiyaku.or.jp/" target="_blank">日本薬剤師会</a>
+      </div>
+      <div class="footer-office-info">
+        <p>〒895-0027<br>薩摩川内市西向田町17-11<br>TEL：0996(41)5019　FAX：0996(22)4449</p>
+      </div>
+    </div>
+    <div class="copyright">&copy; 一般社団法人川内薬剤師会</div>
+  </footer>
+  
   <script>
-    fetch('header.html').then(res => res.text()).then(html => {
-      document.getElementById('header-include').innerHTML = html;
-    });
-    fetch('sidebar.html').then(res => res.text()).then(html => {
-      document.getElementById('sidebar-include').innerHTML = html;
-      // サイドバーの現在ページにactiveクラスを付与
-      const links = document.querySelectorAll('.sidebar a');
-      const path = location.pathname.split('/').pop();
-      links.forEach(link => {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
+    // グローバルナビのサブメニュー制御
+    document.addEventListener('DOMContentLoaded', function() {
+      const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+      hasSubmenuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        
+        item.addEventListener('mouseenter', function() {
+          item.classList.add('submenu-open');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          item.classList.remove('submenu-open');
+        });
       });
     });
-    fetch('footer.html').then(res => res.text()).then(html => {
-      document.getElementById('footer-include').innerHTML = html;
-    });
+    
+    // サイドバー制御
+    console.log("sidebar.js loaded");
+    
+    function waitForSidebarAndInit() {
+      const btn = document.getElementById('sidebar-toggle');
+      const arrow = btn.querySelector('.arrow-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (btn && sidebar && overlay) {
+        // 現在ページにactiveクラスを付与
+        const links = document.querySelectorAll('.sidebar a');
+        const path = location.pathname.split('/').pop().replace(/\?.*$/, '');
+        links.forEach(link => {
+          if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
+            link.classList.add('active');
+          }
+        });
+        
+        btn.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          overlay.style.display = sidebar.classList.contains('open') ? 'block' : 'none';
+          arrow.textContent = sidebar.classList.contains('open') ? '◀' : '▶';
+          arrow.classList.toggle('active', sidebar.classList.contains('open'));
+        });
+        
+        overlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          overlay.style.display = 'none';
+          arrow.textContent = '▶';
+          arrow.classList.remove('active');
+        });
+      } else {
+        setTimeout(waitForSidebarAndInit, 50);
+      }
+    }
+    waitForSidebarAndInit();
   </script>
 </body>
 </html> 

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>薬局一覧 | 川内薬剤師会</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="img/SPA.png" alt="一般社団法人川内薬剤師会ロゴ" class="header-logo-large">
+      <div class="header-title-group-row">
+        <h1 class="main-title"><a href="index.html" style="color:inherit;text-decoration:none;">一般社団法人川内薬剤師会</a></h1>
+        <div class="sub-title">Sendai Pharmaceutical Association</div>
+      </div>
+    </div>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-submenu">
+          <a href="about.html">組織概要</a>
+          <ul class="submenu">
+            <li><a href="greeting.html">会長あいさつ</a></li>
+            <li><a href="officers.html">役員一覧</a></li>
+            <li><a href="rules.html">定款</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">薬局検索</a></li>
+        <li><a href="fax.html">FAXコーナー</a></li>
+        <li><a href="contact.html">事務局</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <button id="sidebar-toggle">
+    <div class="arrow-toggle">▶</div>
+  </button>
+  
+  <div class="container">
+    <div class="sidebar-wrapper">
+      <nav class="sidebar">
+        <ul>
+          <li style="visibility:hidden;">ダミー</li>
+          <li><a href="holiday.html">休日当番</a></li>
+          <li><a href="night.html">夜間輪番</a></li>
+          <li><a href="homecare.html">在宅可能薬局リスト</a></li>
+          <li><a href="frail.html">フレイル予防講座</a></li>
+          <li><a href="search.html">薬局検索</a></li>
+          <li><a href="school.html">学校薬剤師</a></li>
+          <li><a href="disaster.html">災害対策</a></li>
+          <li><a href="collab.html">薬薬連携</a></li>
+          <li><a href="workshop.html">研修会</a></li>
+          <li><a href="kagonet.html">カゴネット</a></li>
+          <li><a href="koshiki.html">甑島医療調査</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <div class="main-content">
+      <section>
+        <h2>薬局一覧</h2>
+        <p style="margin-bottom: 2rem; color: #666; line-height: 1.6;">
+          川内薬剤師会に所属する薬局の一覧です。各薬局の詳細情報や営業時間、取り扱いサービスなどをご確認いただけます。
+        </p>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #228b22;">
+          <h3 style="color: #228b22; margin-bottom: 1rem; font-size: 1.1rem;">🔍 薬局検索</h3>
+          <p style="margin-bottom: 1rem;">
+            お住まいの地域や条件に合わせて薬局を検索したい場合は、以下のリンクをご利用ください。
+          </p>
+          <a href="search.html" style="display: inline-block; background: #228b22; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background 0.2s;">
+            薬局検索ページへ
+          </a>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.2rem; border-bottom: 2px solid #228b22; padding-bottom: 0.5rem;">📋 薬局一覧表</h3>
+          
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+              <thead>
+                <tr style="background: #f8f9fa;">
+                  <th style="border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold; color: #2c3e50;">薬局名</th>
+                  <th style="border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold; color: #2c3e50;">住所</th>
+                  <th style="border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold; color: #2c3e50;">電話番号</th>
+                  <th style="border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold; color: #2c3e50;">営業時間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">あおい薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-7440</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～木8:30～19:00、金土8:30～17:00、日9:00～17:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">クアルタあおい薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-21-1217</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～木8:30～18:00、金8:30～16:30、土8:30～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">ひかり調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-7902</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:30、土8:30～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">あすなろ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-25-1321</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土休み</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">アクア薬局川内</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-0008</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金9:00～18:00、木土9:00～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">みなと薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市中郷</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-26-1588</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金9:00～12:30・14:30～18:00、水土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">東山調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市横馬場町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-25-1942</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金9:00～18:00、木土9:00～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">さと薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市平佐町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-8756</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:15、木8:30～16:30、土8:30～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">ゆう薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市平佐町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-3802</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～19:00、土9:00～18:00（13:00～15:00昼休み）</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">花咲薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市平佐町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-7621</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金8:30～12:30・13:30～17:30、土8:30～12:00、水休み</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">なごみ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市平佐町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-3320</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:30、木8:30～17:30、土8:30～17:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">きずな薬局 平佐店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市平佐町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-0987</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:30、土8:30～15:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">めぐみ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市原田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-1011</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～土9:00～18:00、第2・4土9:00～15:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">白十字薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市原田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-1110</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～15:00、当番時～21:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">ハーブ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市田崎町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-5101</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">午前：月～土8:30～12:30、午後：月水金14～18、火木15～18、土14～17</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">天辰マリンバ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市天辰町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-5750</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">くじゃく薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市御陵下町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-0160</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金8:30～18:00、水土8:30～14:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">さつま薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市御陵下町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-0324</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金8:30～18:00、水土8:30～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">そうごう薬局御陵下店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市御陵下町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-1351</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金8:30～17:30、水土8:30～12:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">大信薬局 上川内店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市御陵下町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-41-5018</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金9:00～18:00、木土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">あおは薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市御陵下町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-26-1185</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:00、木土8:30～12:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">大小路ふれあい薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大小路町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-8810</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～17:45、土9:00～12:45</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">アジア薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大小路町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-7721</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">コスモ青空薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大小路町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-0255</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金9:00～17:30、水土9:00～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">しらゆり調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大小路町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-23-1949</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">ヘルシー薬局川内店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東大小路町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-7820</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金9:00～18:00、木9:00～12:15、土9:00～17:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">ケーアイ調剤薬局五代店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市五代町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-21-1952</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:30、木8:00～16:00、土8:30～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">サンライズ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市五代町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-7471</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金9:00～18:00、水9:00～15:30、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">川内調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市若葉町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-25-3985</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:00、木土8:30～12:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">わかさ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市若葉町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-0543</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">つばさ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市神田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-25-4533</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～12:30・14:00～18:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">大王マリンバ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大王町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-41-6109</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水木土9:00～18:30、金9:00～17:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">あさひ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市西向田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-29-4622</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～12:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">ビオラ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市大王町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-21-1655</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～土8:30～18:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">あさがお薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市向田本町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-23-8934</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金土8:30～17:30、木8:30～14:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">かんだ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東開門町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-23-6910</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">こころ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東開聞町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-24-0556</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:00～19:00、土8:00～17:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">ケーアイ調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市高城町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-22-4213</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金9:00～19:00、木9:00～16:00、土9:00～16:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">すず調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東開聞町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-23-6504</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:30、土8:30～14:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">そうごう薬局薩摩川内店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市永利町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-20-7201</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">ひぐらし薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市向田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-23-1646</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:30、土8:30～12:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">オーロラ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市水引町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-41-4411</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～土8:00～17:15</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">スマイル薬局川内駅前店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東向田町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-29-3630</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～12:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">水引薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市水引町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-31-2010</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">わか鮎薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市東郷町斧渕</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-42-1107</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:00～18:00、土8:00～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">くれよん調剤薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市勝目町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-21-1166</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金9:00～18:00、土9:00～13:00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">福田薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市樋脇町市比野</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-38-0003</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～15:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">あさみ調剤薬局川内店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市勝目町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-1500</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～18:00、土8:30～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">市比野マリンバ薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市樋脇町市比野</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-38-2020</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～土9:00～18:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">さつき薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市隈之城町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-8765</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火水金8:30～18:00、木8:30～13:00、土8:30～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">みやび薬局隈之城店</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市隈之城町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-29-3501</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月火木金9:00～18:15、水土9:00～13:00</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">宮崎町薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市宮崎町</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">0996-27-8797</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～17:30、土8:30～12:30</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 12px;">Ⅰ＆Ｈ上こしき薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市上甑町中甑</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">09969-4-3635</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～17:30</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="border: 1px solid #ddd; padding: 12px;">Ⅰ＆Ｈ下こしき薬局</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">薩摩川内市下甑町手打</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">09969-4-3087</td>
+                  <td style="border: 1px solid #ddd; padding: 12px;">月～金8:30～17:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <p style="margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+            ※ 営業時間や休業日は変更される場合があります。詳細は各薬局にお問い合わせください。<br>
+            ※ 薬局一覧の詳細情報は随時更新されます。
+          </p>
+        </div>
+
+        <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+          <h3 style="color: #228b22; margin-bottom: 1rem; font-size: 1.1rem;">💡 ご利用案内</h3>
+          <ul style="margin: 0; padding-left: 1.5rem; color: #555;">
+            <li style="margin-bottom: 0.5rem;">処方箋の有効期限は発行日を含めて4日間です</li>
+            <li style="margin-bottom: 0.5rem;">かかりつけ薬局を決めることで、お薬の管理がより安全になります</li>
+            <li style="margin-bottom: 0.5rem;">在宅医療対応薬局については「在宅可能薬局リスト」をご確認ください</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-global-nav">
+      <div class="footer-cards">
+        <a class="footer-card" href="https://kayaku.jp/" target="_blank">鹿児島県薬剤師会</a>
+        <a class="footer-card" href="https://www.nichiyaku.or.jp/" target="_blank">日本薬剤師会</a>
+      </div>
+      <div class="footer-office-info">
+        <p>〒895-0027<br>薩摩川内市西向田町17-11<br>TEL：0996(41)5019　FAX：0996(22)4449</p>
+      </div>
+    </div>
+    <div class="copyright">&copy; 一般社団法人川内薬剤師会</div>
+  </footer>
+  
+  <script>
+    // グローバルナビのサブメニュー制御
+    document.addEventListener('DOMContentLoaded', function() {
+      const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+      hasSubmenuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        
+        item.addEventListener('mouseenter', function() {
+          item.classList.add('submenu-open');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          item.classList.remove('submenu-open');
+        });
+      });
+    });
+    
+    // サイドバー制御
+    console.log("sidebar.js loaded");
+    
+    function waitForSidebarAndInit() {
+      const btn = document.getElementById('sidebar-toggle');
+      const arrow = btn.querySelector('.arrow-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (btn && sidebar && overlay) {
+        // 現在ページにactiveクラスを付与
+        const links = document.querySelectorAll('.sidebar a');
+        const path = location.pathname.split('/').pop().replace(/\?.*$/, '');
+        links.forEach(link => {
+          if (link.getAttribute('href').replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
+            link.classList.add('active');
+          }
+        });
+        
+        btn.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          overlay.style.display = sidebar.classList.contains('open') ? 'block' : 'none';
+          arrow.textContent = sidebar.classList.contains('open') ? '◀' : '▶';
+          arrow.classList.toggle('active', sidebar.classList.contains('open'));
+        });
+        
+        overlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          overlay.style.display = 'none';
+          arrow.textContent = '▶';
+          arrow.classList.remove('active');
+        });
+      } else {
+        setTimeout(waitForSidebarAndInit, 50);
+      }
+    }
+    waitForSidebarAndInit();
+  </script>
+</body>
+</html> 

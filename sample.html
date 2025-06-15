@@ -22,6 +22,10 @@
   <script>
     fetch('header.html').then(res => res.text()).then(html => {
       document.getElementById('header-include').innerHTML = html;
+      // header.html挿入後にheader.jsを動的に読み込む
+      const script = document.createElement('script');
+      script.src = 'header.js';
+      document.body.appendChild(script);
     });
     fetch('sidebar.html').then(res => res.text()).then(html => {
       document.getElementById('sidebar-include').innerHTML = html;
